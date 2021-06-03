@@ -1,4 +1,4 @@
-//Raiz//
+//Raiz// //Imortal até ser o ultimo, porem atira devagar//
 tree("Root")
 		parallel 
 			repeat mute tree("Patrol")
@@ -21,14 +21,14 @@ tree("Attack")
 		sequence
 			TargetPlayer
 			LookAtTarget
-			Wait(0.2)
+			Wait(0.3)
 			Fire
 
 //Morte//
 tree("Dead")
 	sequence
 		IsHealthLessThan(0.1)
-		Explode
+		ExplodeBlack
 
 
 

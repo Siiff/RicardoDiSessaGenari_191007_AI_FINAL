@@ -1,4 +1,4 @@
-//Raiz//
+//Raiz// //Persegue e atira//
 tree("Root")
 		parallel 
 			repeat mute tree("Patrol")
@@ -21,6 +21,7 @@ tree("Attack")
 		sequence
 			TargetPlayer
 			LookAtTarget
+			FollowPlayer
 			Wait(0.2)
 			Fire
 

@@ -421,6 +421,7 @@ MonoBehaviour:
     type: 3}
   destination: {x: 0, y: 0, z: 0}
   target: {x: 0, y: 0, z: 0}
+  Droids: []
 --- !u!135 &191254541
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1082,7 +1083,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Name
-      value: Droid (4)
+      value: "Droid ImortalAt\xE9TodosMorrerem"
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
+      propertyPath: m_TagString
+      value: droid
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_RootOrder
@@ -1131,19 +1136,19 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 0dd05cf4e8765a3419af9756a9720e91, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 0dd05cf4e8765a3419af9756a9720e91, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 0dd05cf4e8765a3419af9756a9720e91, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 0dd05cf4e8765a3419af9756a9720e91, type: 2}
     - target: {fileID: 2300002, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1451,7 +1456,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Name
-      value: Droid (1)
+      value: Droid Pacifico
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
+      propertyPath: m_TagString
+      value: droid
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_RootOrder
@@ -1500,19 +1509,19 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: a423d4a894070ba428b15bcf377881ce, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: a423d4a894070ba428b15bcf377881ce, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: a423d4a894070ba428b15bcf377881ce, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: a423d4a894070ba428b15bcf377881ce, type: 2}
     - target: {fileID: 2300002, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1697,7 +1706,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Name
-      value: Droid (2)
+      value: Droid Chato
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
+      propertyPath: m_TagString
+      value: droid
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_RootOrder
@@ -1746,19 +1759,19 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: f692937203f1a77458c3b11bad10ae7d, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: f692937203f1a77458c3b11bad10ae7d, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: f692937203f1a77458c3b11bad10ae7d, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: f692937203f1a77458c3b11bad10ae7d, type: 2}
     - target: {fileID: 2300002, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2457,7 +2470,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Name
-      value: Droid (3)
+      value: Droid Perseguidor
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
+      propertyPath: m_TagString
+      value: droid
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_RootOrder
@@ -2506,19 +2523,19 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 2420c9ef0aeba08469e9583e885a862e, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 2420c9ef0aeba08469e9583e885a862e, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 2420c9ef0aeba08469e9583e885a862e, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 2420c9ef0aeba08469e9583e885a862e, type: 2}
     - target: {fileID: 2300002, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2644,6 +2661,7 @@ MonoBehaviour:
     type: 3}
   destination: {x: 0, y: 0, z: 0}
   target: {x: 0, y: 0, z: 0}
+  Droids: []
 --- !u!114 &1455764655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3276,7 +3294,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Name
-      value: Droid
+      value: DroidNormal
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
+      propertyPath: m_TagString
+      value: droid
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_RootOrder
@@ -3325,19 +3347,19 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 08f95bf8dbba47d4ab591bb1624acedc, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 08f95bf8dbba47d4ab591bb1624acedc, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 08f95bf8dbba47d4ab591bb1624acedc, type: 2}
     - target: {fileID: 2300000, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: 35bd573cd6b85425eaf309794052e5a2, type: 2}
+      objectReference: {fileID: 2100000, guid: 08f95bf8dbba47d4ab591bb1624acedc, type: 2}
     - target: {fileID: 2300002, guid: f522d7a6ae22b4349bb8a2aa6cfb6bff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3572,7 +3594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scripts:
-  - {fileID: 4900000, guid: d3666175461d4fc4f9c7414cb7a24244, type: 3}
+  - {fileID: 4900000, guid: d708d6907bac75c4088db8a825aaad41, type: 3}
   autoReset: 1
   tickOn: 0
   sourceInfos:
@@ -3600,6 +3622,7 @@ MonoBehaviour:
     type: 3}
   destination: {x: 0, y: 0, z: 0}
   target: {x: 0, y: 0, z: 0}
+  Droids: []
 --- !u!135 &1879577311
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3768,7 +3791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scripts:
-  - {fileID: 4900000, guid: d708d6907bac75c4088db8a825aaad41, type: 3}
+  - {fileID: 4900000, guid: d3666175461d4fc4f9c7414cb7a24244, type: 3}
   autoReset: 1
   tickOn: 0
   sourceInfos:
@@ -3796,6 +3819,7 @@ MonoBehaviour:
     type: 3}
   destination: {x: 0, y: 0, z: 0}
   target: {x: 0, y: 0, z: 0}
+  Droids: []
 --- !u!135 &1948952000
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4494,6 +4518,7 @@ MonoBehaviour:
     type: 3}
   destination: {x: 0, y: 0, z: 0}
   target: {x: 0, y: 0, z: 0}
+  Droids: []
 --- !u!135 &2119782649
 SphereCollider:
   m_ObjectHideFlags: 0

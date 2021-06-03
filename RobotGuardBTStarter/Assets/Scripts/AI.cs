@@ -22,29 +22,36 @@ public class AI : MonoBehaviour
 	float rotSpeed = 5.0f;
 	float visibleRange = 80.0f;
 	float shotRange = 40.0f;
+    [Header("Droids")]
+    public GameObject[] Droids;
 
-	void Start()
+    void Start()
 	{
 		//Atribuindo componentes e stopdistance//
 		agent = this.GetComponent<NavMeshAgent>();
 		agent.stoppingDistance = shotRange - 5; //for a little buffer
-	    //Regeneração de vida//
-		InvokeRepeating("UpdateHealth", 5, 0.5f);
+												//Regeneração de vida//
+		//InvokeRepeating("UpdateHealth", 5, 1.5f);
 	}
 
 	void Update()
 	{
+		EncontrarDroids();
 		//Barra de vida//
 		Vector3 healthBarPos = Camera.main.WorldToScreenPoint(this.transform.position);
 		healthBar.value = (int)health;
 		healthBar.transform.position = healthBarPos + new Vector3(0, 60, 0);
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+			health -= 40;
+        }
 	}
-	//Sistema de vida + regeneração//
+/*	//Sistema de vida + regeneração//
 	void UpdateHealth()
 	{
 		if (health < 100)
 			health++;
-	}
+	}*/
 	//Sistema de dano//
 	void OnCollisionEnter(Collision col)
 	{
@@ -65,16 +72,16 @@ public class AI : MonoBehaviour
 		Task.current.Succeed();
 	}
 	//Metodo de Andar Aleatoriamente//
-	[Task] 
-	public void PickRandomDestination() 
-	{ 
+	[Task]
+	public void PickRandomDestination()
+	{
 		Vector3 dest = new Vector3(Random.Range(-100, 100), 0, Random.Range(-100, 100));
-		agent.SetDestination(dest); 
-		Task.current.Succeed(); 
+		agent.SetDestination(dest);
+		Task.current.Succeed();
 	}
 	//Movendo pra posição//
-	[Task] 
-	public void MoveToDestination() 
+	[Task]
+	public void MoveToDestination()
 	{
 		if (Task.isInspected)
 		{
@@ -82,8 +89,16 @@ public class AI : MonoBehaviour
 		}
 		if (agent.remainingDistance <= agent.stoppingDistance && !agent.pathPending)
 		{
-			Task.current.Succeed(); 
-		} 
+			Task.current.Succeed();
+		}
+	}
+
+	[Task]
+	public void FollowPlayer()
+    {
+		Vector3 dest = new Vector3(player.transform.position.x,player.transform.position.y,player.transform.position.z);
+		agent.SetDestination(dest);
+		Task.current.Succeed();
 	}
 	//Metodo de target no player//
 	[Task]
@@ -166,6 +181,31 @@ public class AI : MonoBehaviour
 		Destroy(this.gameObject); 
 		return true;
 	}
+	
+	[Task] //MorrerDoPreto//
+	public bool ExplodeBlack()
+	{//verificando se ele é o ultimo, se for, morre, se não, regenera vida
+		if(Droids.Length == 1)
+        {
+			Debug.LogError("SOMENTE O PRETO TA VIVO");
+			bool pretoUnico = true;
+            if (pretoUnico)
+            {
+				Explode();
+            }
+		}
+        else
+        {
+			health = 70;
+        }
+		return true;
+	}
+	//Pegando os droids na cena
+	public void EncontrarDroids()
+    {
+		Droids = GameObject.FindGameObjectsWithTag("droid");
+		Debug.Log("" + Droids);
+    }
 
 }
 

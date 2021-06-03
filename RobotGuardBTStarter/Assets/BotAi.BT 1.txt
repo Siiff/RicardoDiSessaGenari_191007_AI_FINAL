@@ -1,4 +1,4 @@
-//Raiz//
+//Raiz// //Ataca só se for atacado//
 tree("Root")
 		parallel 
 			repeat mute tree("Patrol")
@@ -11,10 +11,11 @@ tree("Wander")
 //Patrulha//
 tree("Patrol")
 		fallback 
-			tree("Attack")
-			while IsHealthLessThan(40.0)
+			tree("Wander")
+			while IsHealthLessThan(70.0)
 				fallback
-					tree("Wander")
+					tree("Attack")
+					//Ataca se tiver com a vida abaixo de X
 //Ataca//
 tree("Attack")
 	while SeePlayer

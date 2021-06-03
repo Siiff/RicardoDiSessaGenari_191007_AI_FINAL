@@ -1,4 +1,4 @@
-//Raiz//
+//Raiz// //Normal, só atira mais rapido q os outros//
 tree("Root")
 		parallel 
 			repeat mute tree("Patrol")
@@ -21,7 +21,7 @@ tree("Attack")
 		sequence
 			TargetPlayer
 			LookAtTarget
-			Wait(0.2)
+			Wait(0.1) //Atira mais rapido que todos
 			Fire
 
 //Morte//

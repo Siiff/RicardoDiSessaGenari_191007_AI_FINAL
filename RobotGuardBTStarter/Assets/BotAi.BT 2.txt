@@ -1,28 +1,29 @@
-//Raiz//
+//Raiz// //Só enche o saco atrapalhando o player, n é agressivo//
 tree("Root")
 		parallel 
 			repeat mute tree("Patrol")
 			repeat mute tree("Dead")
+
+//Patrulha//
+tree("Patrol")
+		fallback //Apenas segue o jogador, bloqueando o campo de tiro e atrapalhando a mobilidade
+			tree("Follow")
+			while IsHealthLessThan(40.0)
+				fallback
+					tree("Wander")
+//Ataca//
+tree("Follow")
+	while SeePlayer
+		sequence
+			TargetPlayer
+			LookAtTarget
+			Wait(0.1) //Espera antes de ir atrás do robo
+			FollowPlayer
 //Vaga pelo cenario//
 tree("Wander")
 	sequence
 		PickRandomDestination
 		MoveToDestination
-//Patrulha//
-tree("Patrol")
-		fallback 
-			tree("Attack")
-			while IsHealthLessThan(40.0)
-				fallback
-					tree("Wander")
-//Ataca//
-tree("Attack")
-	while SeePlayer
-		sequence
-			TargetPlayer
-			LookAtTarget
-			Wait(0.2)
-			Fire
 
 //Morte//
 tree("Dead")
