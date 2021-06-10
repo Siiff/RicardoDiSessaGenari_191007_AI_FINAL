@@ -201,7 +201,7 @@ public class AI : MonoBehaviour
 		return true;
 	}
 	//Metodo de fuga//
-	public bool Fuga(float health)
+	public bool Fuga(float health) // N SEI PQ N CONSIGO ENFIAR ESSA PORCARIA NO BOTAI.BT SEM DAR ERRO LA, ja tentei tirar/colocar o [task]
     {//se tiver menor q 70, abre a fuga//
         if (this.health < health)
         {
