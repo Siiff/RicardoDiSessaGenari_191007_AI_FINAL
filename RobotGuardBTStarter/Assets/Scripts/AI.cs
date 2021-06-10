@@ -22,16 +22,16 @@ public class AI : MonoBehaviour
 	float rotSpeed = 5.0f;
 	float visibleRange = 80.0f;
 	float shotRange = 40.0f;
-    [Header("Droids")]
-    public GameObject[] Droids;
+	[Header("Droids")]
+	public GameObject[] Droids;
 
-    void Start()
+	void Start()
 	{
 		//Atribuindo componentes e stopdistance//
 		agent = this.GetComponent<NavMeshAgent>();
 		agent.stoppingDistance = shotRange - 5; //for a little buffer
 												//Regeneração de vida//
-		//InvokeRepeating("UpdateHealth", 5, 1.5f);
+												//InvokeRepeating("UpdateHealth", 5, 1.5f);
 	}
 
 	void Update()
@@ -41,17 +41,17 @@ public class AI : MonoBehaviour
 		Vector3 healthBarPos = Camera.main.WorldToScreenPoint(this.transform.position);
 		healthBar.value = (int)health;
 		healthBar.transform.position = healthBarPos + new Vector3(0, 60, 0);
-        if (Input.GetKeyDown(KeyCode.F))
-        {
+		if (Input.GetKeyDown(KeyCode.F))
+		{
 			health -= 40;
-        }
+		}
 	}
-/*	//Sistema de vida + regeneração//
-	void UpdateHealth()
-	{
-		if (health < 100)
-			health++;
-	}*/
+	/*	//Sistema de vida + regeneração//
+		void UpdateHealth()
+		{
+			if (health < 100)
+				health++;
+		}*/
 	//Sistema de dano//
 	void OnCollisionEnter(Collision col)
 	{
@@ -95,8 +95,8 @@ public class AI : MonoBehaviour
 
 	[Task]
 	public void FollowPlayer()
-    {
-		Vector3 dest = new Vector3(player.transform.position.x,player.transform.position.y,player.transform.position.z);
+	{
+		Vector3 dest = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
 		agent.SetDestination(dest);
 		Task.current.Succeed();
 	}
@@ -170,42 +170,61 @@ public class AI : MonoBehaviour
 	}
 
 	[Task] //Se a vida for menor que X, fazer Y//
-	public bool IsHealthLessThan(float health) 
-	{ 
-		return this.health < health; 
+	public bool IsHealthLessThan(float health)
+	{
+		return this.health < health;
 	}
 	[Task] //Morrer//
-	public bool Explode() 
-	{ 
-		Destroy(healthBar.gameObject); 
-		Destroy(this.gameObject); 
+	public bool Explode()
+	{
+		Destroy(healthBar.gameObject);
+		Destroy(this.gameObject);
 		return true;
 	}
-	
+
 	[Task] //MorrerDoPreto//
 	public bool ExplodeBlack()
 	{//verificando se ele é o ultimo, se for, morre, se não, regenera vida
-		if(Droids.Length == 1)
-        {
+		if (Droids.Length == 1)
+		{
 			Debug.LogError("SOMENTE O PRETO TA VIVO");
 			bool pretoUnico = true;
-            if (pretoUnico)
-            {
+			if (pretoUnico)
+			{
 				Explode();
-            }
+			}
 		}
+		else
+		{
+			health = 70;
+		}
+		return true;
+	}
+	//Metodo de fuga//
+	public bool Fuga(float health)
+    {//se tiver menor q 70, abre a fuga//
+        if (this.health < health)
+        {
+			Debug.Log("FUGINDO");
+			return true;
+        }
         else
         {
-			health = 70;
+			return false;
         }
+    }
+	//Metodo de ataque//
+	public bool Atacar(float health)
+    {
 		return true;
 	}
 	//Pegando os droids na cena
 	public void EncontrarDroids()
-    {
+	{
 		Droids = GameObject.FindGameObjectsWithTag("droid");
 		Debug.Log("" + Droids);
-    }
+	}
+
 
 }
 
